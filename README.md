@@ -1,27 +1,3 @@
-//# GetLargestPrime
-//A simple algorithm that returns greatest prime divisor of a number
+# GetLargestPrime
+A simple algorithm that returns greatest prime divisor of a number
 
-public class LargestPrime {
-    public static int getLargestPrime(int number) {
-        if (number < 2) {
-            return -1;
-        }
-        boolean isPrime;
-        int i = number/2;
-        while (i > 1) {
-            isPrime = true;
-            if (number % i == 0) {
-                for (int j = i / 2; j > 1; j--) {
-                    if (i % j == 0){
-                        isPrime = false;
-                    }
-                }
-                if (isPrime) {
-                    return i;
-                }
-            }
-            i--;
-        }
-        return i;
-    }
-}
